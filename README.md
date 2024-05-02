@@ -1,15 +1,15 @@
-# An API for interacting with the Graph
+# An API for demonstrating how FastAPI can be set up
 
 ## Interact with the API 🤝
 
 - Start the API 🏁:
 ```commandline
-python -m graph_api
+python -m fastapi_setup
 ```
 - View the API documentation 📚: http://0.0.0.0:8000/docs
 
 List of available routes 📍: 
-- GET request:  http://0.0.0.0:8000/graph/welcome
+- GET request:  http://0.0.0.0:8000/example/welcome
 
 ## Dockerization 🐳
 
@@ -33,7 +33,7 @@ screen -S session_name
 
 - Start the API
 ```commandline
-python -m graph_api
+python -m fastapi_setup
 ```
 - Detach the screen
 press control + A + D

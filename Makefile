@@ -11,25 +11,25 @@ help:
 
 .PHONY: black
 black:
-	black graph_api/ app.py
+	black fastapi_setup/
 
 .PHONY: lint
 lint:
-	flake8 --max-line-length 120 --ignore E203,E402,W503 graph_api/ app.py
+	flake8 --max-line-length 120 --ignore E203,E402,W503 fastapi_setup/
 
 .PHONY: isort
 isort:
-	isort graph_api/ app.py
+	isort fastapi_setup/
 
 .PHONY: mypy
 mypy:
-	mypy --config-file configs/mypy.ini graph_api/ app.py
+	mypy --config-file configs/mypy.ini fastapi_setup/
 	rm -rf .mypy_cache
 
 .PHONY: docker-build
 docker-build:
-	docker build -t graph-api .
+	docker build -t fastapi-setup .
 
 .PHONY: docker-run
 docker-run:
-	docker run -i -t -p 8000:8000 graph-api
+	docker run -i -t -p 8000:8000 fastapi-setup

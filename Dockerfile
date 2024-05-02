@@ -12,7 +12,7 @@ RUN pip install python-multipart
 
 # Set up the work directory
 WORKDIR .
-COPY ./graph_api /graph_api
+COPY ./fastapi_setup /fastapi_setup
 COPY ./configs /configs
 
 # Expose the api
